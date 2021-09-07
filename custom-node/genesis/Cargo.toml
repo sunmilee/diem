@@ -1,0 +1,28 @@
+[package]
+name = "custom-node"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+abigen = { path = "../../language/move-prover/abigen" }
+diemdb = { path = "../../storage/diemdb" }
+diem-config = { path = "../../config" }
+diem-crypto = { path = "../../crypto/crypto" }
+diem-genesis-tool = { path = "../../config/management/genesis" }
+diem-json-rpc-types = { path = "../../json-rpc/types" }
+diem-node = { path = "../../diem-node" }
+diem-sdk = { path = "../../sdk" }
+diem-temppath = { path = "../../common/temppath" }
+diem-types = { path = "../../types" }
+generate-key = { path = "../../config/generate-key" }
+move-prover = { path = "../../language/move-prover" }
+transaction-builder-generator = { path = "../../language/transaction-builder/generator" }
+
+transaction-builder = { path = "../transaction-builder" }
+
+anyhow = "1.0.38"
+bcs = "0.1.2"
+log = "0.4.14"
+rand = "0.8.3"
+structopt = "0.3.21"
+walkdir = "2.3.1"

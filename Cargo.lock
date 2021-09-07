@@ -1477,6 +1477,42 @@ dependencies = [
 ]
 
 [[package]]
+name = "custom-move-code"
+version = "0.1.0"
+dependencies = [
+ "diem-framework",
+ "diem-vm",
+ "move-stdlib",
+ "move-unit-test",
+]
+
+[[package]]
+name = "custom-node"
+version = "0.1.0"
+dependencies = [
+ "abigen",
+ "anyhow",
+ "bcs",
+ "diem-config",
+ "diem-crypto",
+ "diem-genesis-tool",
+ "diem-json-rpc-types",
+ "diem-node",
+ "diem-sdk",
+ "diem-temppath",
+ "diem-types",
+ "diemdb",
+ "generate-key",
+ "log",
+ "move-prover",
+ "rand 0.8.3",
+ "structopt 0.3.21",
+ "transaction-builder",
+ "transaction-builder-generator",
+ "walkdir",
+]
+
+[[package]]
 name = "dashmap"
 version = "3.11.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6998,6 +7034,36 @@ dependencies = [
 ]
 
 [[package]]
+name = "sample-custom-app"
+version = "0.1.0"
+dependencies = [
+ "abigen",
+ "anyhow",
+ "bcs",
+ "diem-config",
+ "diem-crypto",
+ "diem-framework",
+ "diem-genesis-tool",
+ "diem-json-rpc-types",
+ "diem-node",
+ "diem-sdk",
+ "diem-temppath",
+ "diem-types",
+ "diemdb",
+ "generate-key",
+ "log",
+ "move-binary-format",
+ "move-command-line-common",
+ "move-prover",
+ "move-stdlib",
+ "rand 0.8.3",
+ "structopt 0.3.21",
+ "transaction-builder",
+ "transaction-builder-generator",
+ "walkdir",
+]
+
+[[package]]
 name = "schannel"
 version = "0.1.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8566,6 +8632,25 @@ dependencies = [
  "tracing-core",
  "tracing-log",
  "tracing-serde",
+]
+
+[[package]]
+name = "transaction-builder"
+version = "0.0.1"
+dependencies = [
+ "anyhow",
+ "bcs",
+ "diem-types",
+ "diem-workspace-hack",
+ "hex",
+ "log",
+ "move-core-types",
+ "once_cell",
+ "parking_lot",
+ "proptest",
+ "proptest-derive",
+ "thiserror",
+ "tokio",
 ]
 
 [[package]]
