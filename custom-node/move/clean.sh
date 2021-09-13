@@ -1,1 +1,0 @@
-df-cli sandbox clean

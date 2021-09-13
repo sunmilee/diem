@@ -13,18 +13,21 @@ abigen = { path = "../../language/move-prover/abigen" }
 diemdb = { path = "../../storage/diemdb" }
 diem-config = { path = "../../config" }
 diem-crypto = { path = "../../crypto/crypto" }
+diem-framework = { path = "../../language/diem-framework" }
 diem-genesis-tool = { path = "../../config/management/genesis" }
 diem-json-rpc-types = { path = "../../json-rpc/types" }
 diem-node = { path = "../../diem-node" }
 diem-sdk = { path = "../../sdk" }
 diem-temppath = { path = "../../common/temppath" }
 diem-types = { path = "../../types" }
-diem-workspace-hack = { path = "../../common/workspace-hack" }
 generate-key = { path = "../../config/generate-key" }
+move-binary-format = { path = "../../language/move-binary-format" }
+move-command-line-common = { path = "../../language/move-command-line-common" }
 move-prover = { path = "../../language/move-prover" }
+move-stdlib = { path = "../../language/move-stdlib" }
 transaction-builder-generator = { path = "../../language/transaction-builder/generator" }
 
-shuffle-transaction-builder = { path = "../transaction-builder" }
+transaction-builder = { path = "../transaction-builder" }
 
 anyhow = "1.0.38"
 bcs = "0.1.2"
