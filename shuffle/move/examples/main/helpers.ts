@@ -104,3 +104,8 @@ export function hexToAscii(hexx: string) {
   }
   return str;
 }
+
+export function getAddressFromPrivateKey(privateKeyBytes: Uint8Array,): Promise<string> {
+  const publicKey = await ed.getPublicKey(privateKeyBytes);
+  const address = await publicKey.
+}

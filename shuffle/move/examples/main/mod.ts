@@ -14,6 +14,11 @@ const privateKeyPath = path.join(shuffleDir, "accounts/latest/dev.key");
 const senderAddressPath = path.join(shuffleDir, "accounts/latest/address");
 const senderAddress = await Deno.readTextFile(senderAddressPath);
 export const fullSenderAddress = "0x" + senderAddress;
+const receiverPrivateKeyPath = path.join(shuffleDir, "accounts/testkeys/receiver.key");
+let receiverPrivateKeyBytes = await Deno.readFile(receiverPrivateKeyPath);
+const receiverAddressPath = path.join(shuffleDir, "accounts/testkeys/address");
+const receiverAddress = await Deno.readTextFile(receiverAddressPath);
+export const fullSenderAddress = "0x" + receiverAddress;
 
 // Client side creation and signing of transactions.
 // https://github.com/diem/diem/blob/main/json-rpc/docs/method_submit.md#method-submit
