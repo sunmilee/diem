@@ -42,19 +42,6 @@ export async function buildAndSubmitTransaction(
   return await res.json();
 }
 
-// DiemHelpers.invokeScriptFunction(
-//     "0x1::AccountCreationScripts::create_parent_vasp_account",  // script function
-//         ["0x1::XUS::XUS"], // tyArgs: Seq<DiemTypes.TypeTag>
-//         ["0", "0x943242...", 0xe23424...", "0x75645...", true]"
-//     ");
-
-// new DiemTypes.StructTag(
-//     address,
-//     new DiemTypes.Identifier("XUS"),
-//     new DiemTypes.Identifier("XUS"),
-//     [],
-// ),
-
 export async function submitScriptFunctionTransaction(
     senderAddress: string,
     sequenceNumber: number,
@@ -141,12 +128,12 @@ export function buildScriptFunctionTransaction(
   tyArgs: Seq<DiemTypes.TypeTag>, //[0,9,8]
   args: Seq<bytes>, // new Uint8Array(9,0,9)    Seq<any>
 ): DiemTypes.TransactionPayload {
-  const moduleId: DiemTypes.ModuleId = new DiemTypes.ModuleId(
+  const module_id: DiemTypes.ModuleId = new DiemTypes.ModuleId(
     hexToAccountAddress(moduleAddress),
     new DiemTypes.Identifier(moduleName),
   );
   return new DiemTypes.ScriptFunction(
-    moduleId,
+    module_id,
     new DiemTypes.Identifier(functionName),
     tyArgs,
     args,
@@ -163,7 +150,7 @@ export async function buildAndSubmitScriptFunctionTransaction(
   args: Seq<bytes>,
   sequenceNumber: number,
 ) {
-  const payload: DiemTypes.TransactionPayload = buildScriptFunctionTransaction(
+  let payload: DiemTypes.TransactionPayload = buildScriptFunctionTransaction(
     moduleAddress,
     moduleName,
     functionName,
