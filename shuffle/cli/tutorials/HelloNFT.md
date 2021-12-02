@@ -22,8 +22,8 @@ Inside `nft/main/sources/nft`, create a new move file `MyNFT.move`.
 
 ```
 module Sender::MyNFT {
-use Sender::NFTStandard;
-use Std::Signer;
+    use Sender::NFTStandard;
+    use Std::Signer;
 
     struct MyNFT has drop, store {}
 
@@ -37,8 +37,8 @@ will be the `NFTType` we use when calling `NFTStandard` methods.
 
 ```
 module Sender::MyNFT {
-use Sender::NFTStandard;
-use Std::Signer;
+    use Sender::NFTStandard;
+    use Std::Signer;
 
     struct MyNFT has drop, store {}
 
@@ -106,7 +106,7 @@ Let's try calling the `mint_nft` script function within the console.
 
 > let txn = await helpers.invokeScriptFunction(scriptFunction, typeArguments, args);
 
-> txn = await devapi.waitForTransaction(txn.hash);
+> txn = await devapi.waitForTransactionCompletion(txn.hash);
 {
   type: "user_transaction",
   version: "264",
