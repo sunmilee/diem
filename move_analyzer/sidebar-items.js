@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["completion",""],["context",""],["vfs","The language server must operate upon Move source buffers as they are being edited. As a result, it is frequently queried about buffers that have not yet (or may never be) saved to the actual file system."]]});

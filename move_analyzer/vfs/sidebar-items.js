@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["on_text_document_sync_notification","Updates the given virtual file system based on the text document sync notification that was sent."]],"struct":[["VirtualFileSystem","A mapping from identifiers (file names, potentially, but not necessarily) to their contents."]]});

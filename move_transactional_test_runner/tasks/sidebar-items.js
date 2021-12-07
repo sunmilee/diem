@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["RawAddress",""],["SyntaxChoice",""],["TaskCommand",""]],"fn":[["taskify",""]],"struct":[["EmptyCommand",""],["InitCommand",""],["PrintBytecodeCommand","Translates the given Move IR module into bytecode, then prints a textual representation of that bytecode."],["PublishCommand",""],["RunCommand",""],["TaskInput",""],["ViewCommand",""]]});
